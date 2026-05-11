@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#007500">
+    <title>Produto - Panini Brasil</title>
+    <meta name="description" content="Produto oficial Panini FIFA World Cup 2026.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-primary: #007500;
+        --color-primary-hover: #006800;
+        --color-pix: #00a63e;
+        --color-announcement: #16a34a;
+        --color-background: #f9fafb;
+        --color-surface: #ffffff;
+        --color-text: #101828;
+        --color-muted: #667085;
+        --color-border: #f3f4f6;
+        --color-footer: #101828;
+        --color-footer-text: #98a2b3;
+        --font-body: Inter, "Segoe UI", sans-serif;
+        --font-heading: Outfit, Inter, "Segoe UI", sans-serif;
+        --page-width: 1280px;
+        --radius-card: 12px;
+        --radius-button: 8px;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/theme.css">
+    <link rel="stylesheet" href="assets/hostinger.css">
+    <script src="assets/app.js" defer></script>
+  </head>
+
+  <body class="template-product">
+    <a class="skip-link" href="#MainContent">Ir para o conteúdo</a>
+
+    <div class="site-header-wrapper">
+      <div class="announcement-bar">
+        <div class="announcement-bar__inner">
+          <span class="announcement-bar__text">FRETE GRÁTIS PARA TODO O BRASIL ⚡ SÓ HOJE!</span>
+        </div>
+      </div>
+
+      <header class="site-header" data-site-header>
+        <div class="site-header__inner page-width">
+          <div class="site-header__leading">
+            <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="MobileMenu" aria-expanded="false" data-mobile-menu-toggle>
+              <span class="site-header__menu-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+
+            <a class="site-header__icon-button site-header__search-button" href="./#produtos" aria-label="Pesquisar produtos">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+            </a>
+          </div>
+
+          <a class="site-header__logo-link" href="./" aria-label="Panini FIFA World Cup 2026">
+            <img class="site-header__logo-image" src="assets/panini-logo.webp" alt="Panini" width="132" height="35" loading="eager" style="--logo-width: 132px; --logo-width-mobile: 132px;">
+          </a>
+
+          <nav class="site-header__nav" aria-label="Menu principal">
+            <a class="site-header__nav-link" href="./">Início</a>
+            <a class="site-header__nav-link" href="./#escolha-seu-kit">Escolha seu Kit</a>
+            <a class="site-header__nav-link is-active" href="./#produtos">Produtos</a>
+          </nav>
+
+          <div class="site-header__actions">
+            <a class="site-header__icon-button site-header__cart" href="#CartDrawer" aria-label="Abrir carrinho" data-cart-open>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.1 2.1h2l2.7 12.6a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6l1.2-6.7H5.1" />
+              </svg>
+              <span class="site-header__cart-count" data-cart-count hidden>0</span>
+            </a>
+
+            <a class="site-header__icon-button" href="#conta" aria-label="Minha conta">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="mobile-menu" id="MobileMenu" data-mobile-menu hidden>
+          <div class="mobile-menu__inner page-width">
+            <nav class="mobile-menu__nav" aria-label="Menu mobile">
+              <a class="mobile-menu__link" href="./">Início</a>
+              <a class="mobile-menu__link" href="./#escolha-seu-kit">Escolha seu Kit</a>
+              <a class="mobile-menu__link" href="./#produtos">Produtos</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main id="MainContent" class="main-content product-main" role="main" tabindex="-1">
+      <section class="product-not-found page-width" data-product-not-found hidden>
+        <div class="surface-card">
+          <h1>Produto não encontrado</h1>
+          <p>Volte para a lista de produtos oficiais Panini e escolha uma opção disponível.</p>
+          <a class="button button--primary" href="./#produtos">Ver produtos</a>
+        </div>
+      </section>
+
+      <section class="product-page page-width" data-product-page hidden>
+        <a class="product-back-link" href="./#produtos">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></svg>
+          Voltar aos produtos
+        </a>
+
+        <div class="product-detail-card">
+          <div class="product-detail__media">
+            <img data-product-image src="assets/favicon.png" alt="" loading="eager">
+          </div>
+
+          <article class="product-detail__content">
+            <span class="product-detail__badge" data-product-category>Produto</span>
+            <h1 data-product-title>Produto Panini</h1>
+
+            <div class="product-rating" aria-label="Avaliação 5 de 5">
+              <span aria-hidden="true">★★★★★</span>
+              <strong>5.0</strong>
+              <small>(32 avaliações)</small>
+            </div>
+
+            <div class="product-description" data-product-description></div>
+
+            <div class="product-purchase">
+              <div class="product-purchase__price">
+                <span class="product-purchase__compare" data-product-compare-price>R$ 0,00</span>
+                <span class="product-purchase__pix-badge" data-product-pix-badge>5% OFF no PIX</span>
+                <strong data-product-pix-price>R$ 0,00</strong>
+                <small>pagando no PIX</small>
+              </div>
+
+              <button class="product-buy-now" type="button" data-product-buy-now>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z" /></svg>
+                Comprar Agora
+              </button>
+
+              <button class="product-add-cart" type="button" data-product-add>
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <circle cx="8" cy="21" r="1" />
+                  <circle cx="19" cy="21" r="1" />
+                  <path d="M2.1 2.1h2l2.7 12.6a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6l1.2-6.7H5.1" />
+                </svg>
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <section class="product-specs-card">
+          <h2>Detalhes do Produto</h2>
+          <div class="product-specs" data-product-details-content></div>
+        </section>
+
+        <section class="related-products">
+          <h2>Produtos Relacionados</h2>
+          <div class="product-grid" data-related-products></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer" style="--footer-logo-width: 150px;">
+      <div class="site-footer__inner page-width">
+        <div class="site-footer__main">
+          <div class="site-footer__brand">
+            <a class="site-footer__logo-link" href="./" aria-label="Panini FIFA World Cup 2026">
+              <img class="site-footer__logo" src="assets/panini-logo.webp" alt="Panini" width="150" height="40" loading="lazy">
+            </a>
+            <p class="site-footer__description">Loja oficial de álbuns e figurinhas Panini FIFA World Cup 2026. Produtos 100% originais e licenciados.</p>
+          </div>
+
+          <div class="site-footer__column">
+            <h2>Links Rápidos</h2>
+            <ul class="site-footer__links">
+              <li><a href="./">Início</a></li>
+              <li><a href="./#escolha-seu-kit">Escolha seu Kit</a></li>
+              <li><a href="./#produtos">Produtos</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__column">
+            <h2>Informações</h2>
+            <ul class="site-footer__info-list">
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" /></svg><span>Pagamentos seguros via PIX e Cartão de Crédito</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" /></svg><span>Entrega para todo o Brasil</span></li>
+              <li><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" /></svg><span>Produtos licenciados pela FIFA</span></li>
+            </ul>
+            <div class="site-footer__payments" aria-label="Formas de pagamento">
+              <span><img src="assets/checkout/payment-elo.png" alt="Elo" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-pix.png" alt="Pix" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-amex.png" alt="American Express" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-visa.png" alt="Visa" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-diners.png" alt="Diners Club" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-mastercard.png" alt="Mastercard" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-discover.png" alt="Discover" width="60" height="40" loading="lazy"></span>
+              <span><img src="assets/checkout/payment-aura.png" alt="Aura" width="60" height="40" loading="lazy"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>© 2026 Panini FIFA World Cup 2026. Todos os direitos reservados.</p>
+          <p>FIFA World Cup 2026 é marca registrada da FIFA.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cart-drawer" id="CartDrawer" data-cart-drawer data-money-format="BRL" aria-hidden="true">
+      <div class="cart-drawer__overlay" data-cart-close></div>
+
+      <aside class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="CartDrawerTitle" tabindex="-1">
+        <header class="cart-drawer__header">
+          <div>
+            <p class="cart-drawer__eyebrow">Compra segura</p>
+            <h2 id="CartDrawerTitle">Meu carrinho</h2>
+          </div>
+
+          <div class="cart-drawer__header-actions">
+            <span class="cart-drawer__count" data-cart-drawer-count>0 itens</span>
+            <button class="cart-drawer__close" type="button" data-cart-close aria-label="Fechar carrinho">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" /></svg>
+            </button>
+          </div>
+        </header>
+
+        <div class="cart-drawer__empty" data-cart-empty>
+          <div class="cart-drawer__empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.1 2.1h2l2.7 12.6a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6l1.2-6.7H5.1" />
+            </svg>
+          </div>
+          <h3>Seu carrinho está vazio</h3>
+          <p>Adicione produtos oficiais Panini para continuar com a compra.</p>
+          <a class="button button--primary" href="./#produtos">Ver produtos</a>
+        </div>
+
+        <form class="cart-drawer__form" action="checkout.html" method="get" data-cart-drawer-form hidden>
+          <div class="cart-drawer__items" data-cart-items></div>
+
+          <footer class="cart-drawer__footer">
+            <div class="cart-drawer__benefits">
+              <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12.5 9.2 17 19 7" /></svg>FRETE GRÁTIS PARA TODO O BRASIL</span>
+              <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /></svg>Pagamento seguro</span>
+            </div>
+
+            <div class="cart-drawer__subtotal">
+              <span>Subtotal</span>
+              <strong data-cart-subtotal>R$ 0,00</strong>
+            </div>
+
+            <button class="cart-drawer__checkout button button--primary" type="submit">Finalizar compra</button>
+            <button class="cart-drawer__continue" type="button" data-cart-close>Continuar comprando</button>
+          </footer>
+        </form>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#F8F9FA">
+    <title>Checkout Seguro - Panini FIFA World Cup 2026</title>
+    <meta name="description" content="Checkout seguro Panini FIFA World Cup 2026.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/checkout.css">
+    <script src="assets/checkout.js" defer></script>
+  </head>
+
+  <body>
+    <main class="checkout-shell" data-checkout>
+      <header class="checkout-header">
+        <a class="checkout-header__logo" href="./" aria-label="Voltar para a loja">
+          <img src="assets/panini-logo.webp" alt="Panini" width="190" height="52">
+        </a>
+        <div class="checkout-header__secure" aria-label="Pagamento 100% seguro">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <rect x="5" y="10" width="14" height="10" rx="2" />
+            <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+          </svg>
+          <span>
+            <strong>PAGAMENTO</strong>
+            <small>100% SEGURO</small>
+          </span>
+        </div>
+      </header>
+
+      <div class="checkout-offer">
+        Pagamentos com PIX tem 5% OFF + Prioridade de Envio
+      </div>
+
+      <details class="order-summary" data-order-summary>
+        <summary>
+          <span>Resumo do pedido</span>
+          <strong data-summary-total>R$ 0,00</strong>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </summary>
+        <div class="order-summary__items" data-summary-items></div>
+      </details>
+
+      <nav class="checkout-progress" aria-label="Etapas do checkout" data-progress>
+        <button class="checkout-progress__step is-active" type="button" data-step-jump="1">
+          <span class="checkout-progress__icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21a8 8 0 0 1 16 0" />
+            </svg>
+          </span>
+          <span>Identificação</span>
+        </button>
+        <span class="checkout-progress__line"></span>
+        <button class="checkout-progress__step" type="button" data-step-jump="2">
+          <span class="checkout-progress__icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M10 17h4V5H2v12h3" />
+              <path d="M14 8h4l4 4v5h-3" />
+              <path d="M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z" />
+              <path d="M15 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z" />
+            </svg>
+          </span>
+          <span>Entrega</span>
+        </button>
+        <span class="checkout-progress__line"></span>
+        <button class="checkout-progress__step" type="button" data-step-jump="3">
+          <span class="checkout-progress__icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="M3 10h18" />
+            </svg>
+          </span>
+          <span>Pagamento</span>
+        </button>
+      </nav>
+
+      <section class="checkout-empty" data-empty hidden>
+        <h1>Seu carrinho está vazio</h1>
+        <p>Adicione um kit ou produto antes de finalizar a compra.</p>
+        <a href="./#produtos">Voltar para a loja</a>
+      </section>
+
+      <section class="checkout-recap" data-contact-recap hidden>
+        <div>
+          <strong>Identificação</strong>
+          <button type="button" data-edit-step="1">
+            Editar
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </button>
+        </div>
+        <p data-contact-recap-text></p>
+      </section>
+
+      <section class="checkout-recap" data-shipping-recap hidden>
+        <div>
+          <strong>Enviar para</strong>
+          <button type="button" data-edit-step="2">
+            Editar
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </button>
+        </div>
+        <p data-shipping-recap-text></p>
+        <strong class="checkout-recap__shipping-title">Frete selecionado</strong>
+        <p data-shipping-method-recap>FRETE GRÁTIS - Grátis</p>
+      </section>
+
+      <section class="checkout-step is-active" data-step="1">
+        <div class="checkout-step__title">
+          <div>
+            <h1><span>1</span> Identificação</h1>
+            <p>Preencha seus dados para envio do pedido.</p>
+          </div>
+          <strong>1 de 3</strong>
+        </div>
+
+        <form class="checkout-form" data-identification-form novalidate>
+          <label class="checkout-field">
+            <span>Nome completo</span>
+            <span class="checkout-input-wrap">
+              <input type="text" name="name" placeholder="Digite seu nome completo" autocomplete="name" required>
+              <span class="checkout-check">✓</span>
+            </span>
+            <small class="checkout-error" data-error-for="name"></small>
+          </label>
+
+          <label class="checkout-field">
+            <span>E-mail</span>
+            <span class="checkout-input-wrap">
+              <input type="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+              <span class="checkout-check">✓</span>
+            </span>
+            <small class="checkout-error" data-error-for="email"></small>
+          </label>
+
+          <label class="checkout-field checkout-field--short">
+            <span>CPF <small title="Documento usado apenas para emissão do pedido">i</small></span>
+            <span class="checkout-input-wrap">
+              <input type="text" name="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required>
+              <span class="checkout-check">✓</span>
+            </span>
+            <small class="checkout-error" data-error-for="cpf"></small>
+          </label>
+
+          <label class="checkout-field checkout-field--short">
+            <span>Celular/Whatsapp</span>
+            <span class="checkout-input-wrap">
+              <input type="tel" name="phone" placeholder="+55 (00) 00000-0000" autocomplete="tel" inputmode="tel" required>
+              <span class="checkout-check">✓</span>
+            </span>
+            <small class="checkout-error" data-error-for="phone"></small>
+          </label>
+
+          <button class="checkout-button" type="submit">Ir Para Entrega</button>
+        </form>
+      </section>
+
+      <section class="checkout-step" data-step="2" hidden>
+        <div class="checkout-step__title">
+          <div>
+            <h1><span>2</span> Entrega</h1>
+            <p>Informe o endereço de entrega.</p>
+          </div>
+          <strong>2 de 3</strong>
+        </div>
+
+        <form class="checkout-form" data-delivery-form novalidate>
+          <div class="checkout-cep-row">
+            <label class="checkout-field">
+              <span>CEP</span>
+              <span class="checkout-input-wrap">
+                <input type="text" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="9" required>
+                <span class="checkout-check">✓</span>
+              </span>
+              <small class="checkout-error" data-error-for="cep"></small>
+            </label>
+            <strong data-city-state>Informe seu CEP</strong>
+          </div>
+          <p class="checkout-cep-status" data-cep-status></p>
+
+          <label class="checkout-field">
+            <span>Endereço</span>
+            <span class="checkout-input-wrap">
+              <input type="text" name="address" placeholder="Digite rua, avenida, travessa..." autocomplete="address-line1" required>
+              <span class="checkout-check">✓</span>
+            </span>
+            <small class="checkout-error" data-error-for="address"></small>
+          </label>
+
+          <div class="checkout-two-columns">
+            <label class="checkout-field">
+              <span>Nº</span>
+              <span class="checkout-input-wrap">
+                <input type="text" name="number" placeholder="Número" autocomplete="address-line2" required>
+                <span class="checkout-check">✓</span>
+              </span>
+              <small class="checkout-error" data-error-for="number"></small>
+            </label>
+
+            <label class="checkout-field">
+              <span>Bairro</span>
+              <span class="checkout-input-wrap">
+                <input type="text" name="district" placeholder="Digite o bairro" required>
+                <span class="checkout-check">✓</span>
+              </span>
+              <small class="checkout-error" data-error-for="district"></small>
+            </label>
+          </div>
+
+          <label class="checkout-field">
+            <span>Complemento <em>(Opcional)</em></span>
+            <span class="checkout-input-wrap">
+              <input type="text" name="complement" placeholder="">
+            </span>
+          </label>
+
+          <div class="checkout-two-columns checkout-location-fallback" data-location-fallback hidden>
+            <label class="checkout-field">
+              <span>Estado</span>
+              <select name="state" data-state-select>
+                <option value="">Selecione</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+              <small class="checkout-error" data-error-for="state"></small>
+            </label>
+
+            <label class="checkout-field">
+              <span>Cidade</span>
+              <span class="checkout-input-wrap">
+                <input type="text" name="city" placeholder="Selecione">
+              </span>
+              <small class="checkout-error" data-error-for="city"></small>
+            </label>
+          </div>
+
+          <div class="shipping-title">Escolha o frete:</div>
+
+          <div class="shipping-options">
+            <label class="shipping-option">
+              <input type="radio" name="shipping" value="free" data-shipping-price="0" checked>
+              <span class="shipping-option__radio"></span>
+              <span>
+                <strong>FRETE GRÁTIS</strong>
+                <small>
+                  3 a 5 dias
+                  <img class="shipping-option__logo shipping-option__logo--correios" src="assets/checkout/correios-logo.png" alt="Correios">
+                </small>
+              </span>
+              <b>Grátis</b>
+            </label>
+
+            <label class="shipping-option">
+              <input type="radio" name="shipping" value="express" data-shipping-price="18.47">
+              <span class="shipping-option__radio"></span>
+              <span>
+                <strong>FRETE EXPRESSO</strong>
+                <small>
+                  2 a 3 dias
+                  <img class="shipping-option__logo shipping-option__logo--full" src="assets/checkout/full-logo.png" alt="Full">
+                </small>
+              </span>
+              <b>R$ 18,47</b>
+            </label>
+          </div>
+
+          <button class="checkout-button" type="submit">Ir Para Pagamento</button>
+        </form>
+      </section>
+
+      <section class="checkout-step" data-step="3" hidden>
+        <div class="checkout-step__title">
+          <div>
+            <h1><span>3</span> Pagamento</h1>
+            <p>Todas as transações são seguras e criptografadas.</p>
+          </div>
+          <strong>3 de 3</strong>
+        </div>
+
+        <form class="checkout-form checkout-payment" data-payment-form novalidate>
+          <label class="payment-option payment-option--pix is-selected">
+            <input type="radio" name="payment" value="pix" checked>
+            <span class="payment-option__radio"></span>
+            <span class="payment-option__icon payment-option__icon--pix">
+              <img src="assets/checkout/pix-symbol.png" alt="" aria-hidden="true">
+            </span>
+              <span class="payment-option__body">
+                <strong>PIX</strong>
+                <small>Aprovação imediata · 5% OFF</small>
+                <span class="payment-option__details" data-pix-details>
+                  <em>O código Pix expira em 30 minutos após finalizar a compra.</em>
+                <b>Valor no Pix: <span data-pix-total>R$ 0,00</span></b>
+                <button class="checkout-button" type="submit">Finalizar Compra</button>
+                <span class="pix-gateway" data-pix-gateway hidden>
+                  <span class="pix-gateway__loading" data-pix-loading hidden>
+                    <span class="pix-gateway__spinner" aria-hidden="true"></span>
+                    <strong>Gerando Pix seguro...</strong>
+                  </span>
+                  <span class="pix-gateway__ready" data-pix-ready hidden>
+                    <strong>Pix gerado com sucesso</strong>
+                    <small>Valor final: <b data-pix-gateway-amount>R$ 0,00</b></small>
+                    <img class="pix-gateway__qr" data-pix-qr-image alt="QR Code Pix" hidden>
+                    <label class="pix-gateway__copy-field">
+                      <span>Copia e cola Pix</span>
+                      <textarea data-pix-code readonly rows="4"></textarea>
+                    </label>
+                    <button class="pix-gateway__copy" type="button" data-pix-copy>Copiar código Pix</button>
+                    <small data-pix-gateway-meta></small>
+                  </span>
+                  <span class="pix-gateway__error" data-pix-error hidden></span>
+                </span>
+              </span>
+            </span>
+          </label>
+
+          <label class="payment-option payment-option--card">
+            <input type="radio" name="payment" value="card">
+            <span class="payment-option__radio"></span>
+            <span class="payment-option__icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 10h18" />
+                <path d="M7 15h3" />
+              </svg>
+            </span>
+            <span class="payment-option__body">
+              <strong>Cartão de crédito</strong>
+              <span class="card-fields" data-card-fields hidden>
+                <label class="checkout-field">
+                  <span>Número do cartão</span>
+                  <span class="checkout-input-wrap checkout-input-wrap--card-number">
+                    <input type="text" name="cardNumber" placeholder="0000 0000 0000 0000" inputmode="numeric" maxlength="19" autocomplete="cc-number" required>
+                    <span class="card-brand-badge" data-card-brand hidden></span>
+                  </span>
+                </label>
+
+                <div class="checkout-two-columns">
+                  <label class="checkout-field">
+                    <span>Validade <em>(mês ano)</em></span>
+                    <span class="checkout-input-wrap">
+                      <input type="text" name="cardExpiry" placeholder="MM/AA" inputmode="numeric" maxlength="5" autocomplete="cc-exp" required>
+                    </span>
+                  </label>
+
+                  <label class="checkout-field">
+                    <span>Cód. de segurança</span>
+                    <span class="checkout-input-wrap">
+                      <input type="text" name="cardCvv" placeholder="" inputmode="numeric" maxlength="4" autocomplete="cc-csc" required>
+                    </span>
+                  </label>
+                </div>
+
+                <label class="checkout-field">
+                  <span>Nome impresso no cartão</span>
+                  <span class="checkout-input-wrap">
+                    <input type="text" name="cardName" placeholder="Como está no cartão" autocomplete="cc-name" required>
+                  </span>
+                </label>
+
+                <label class="checkout-field">
+                  <span>CPF do titular do cartão</span>
+                  <span class="checkout-input-wrap">
+                    <input type="text" name="cardCpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required>
+                  </span>
+                </label>
+
+                <div class="checkout-field">
+                  <span>Parcelas</span>
+                  <span class="installment-select" data-installment-select>
+                    <input type="hidden" name="installments" data-installments-value value="1x de R$ 0,00 Sem juros">
+                    <button class="installment-select__button" type="button" aria-haspopup="listbox" aria-expanded="false" data-installment-toggle>
+                      <span data-installment-current>1x de R$ 0,00 Sem juros</span>
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </button>
+                    <span class="installment-select__menu" role="listbox" data-installment-menu hidden></span>
+                  </span>
+                </div>
+
+                <button class="checkout-button" type="submit">Finalizar Compra</button>
+              </span>
+            </span>
+          </label>
+
+          <p class="checkout-success" data-checkout-success hidden>
+            Pedido recebido. Na próxima etapa vamos conectar esse botão ao provedor de pagamento real.
+          </p>
+        </form>
+      </section>
+
+      <section class="trust-carousel" aria-label="Garantias da loja" data-trust-carousel>
+        <article class="trust-card">
+          <span class="trust-card__stars">★★★★★</span>
+          <strong>Entrega Segura</strong>
+          <p>Utilizamos os Correios para uma entrega rápida e confiável, com rastreamento disponível a qualquer momento.</p>
+          <span class="trust-card__badge trust-logo trust-logo--delivery" aria-label="Correios">
+            <img src="assets/checkout/entrega-segura-logo.png" alt="Correios" loading="lazy">
+          </span>
+        </article>
+        <article class="trust-card">
+          <span class="trust-card__stars">★★★★★</span>
+          <strong>Compra Segura</strong>
+          <p>Utilizamos sistemas de pagamento protegidos e criptografados, garantindo total segurança para seus dados.</p>
+          <span class="trust-card__badge trust-logo trust-logo--secure" aria-label="Reclame Aqui">
+            <img src="assets/checkout/compra-segura-logo.png" alt="Reclame Aqui" loading="lazy">
+          </span>
+        </article>
+        <article class="trust-card">
+          <span class="trust-card__stars">★★★★★</span>
+          <strong>Reembolso E Garantia</strong>
+          <p>Oferecemos garantia total e política de reembolso para sua tranquilidade. Caso não esteja satisfeito, você pode solicitar a devolução.</p>
+          <span class="trust-card__badge trust-logo trust-logo--appmax" aria-label="Appmax">
+            <img src="assets/checkout/appmax-logo.png" alt="Appmax" loading="lazy">
+          </span>
+        </article>
+      </section>
+
+      <div class="trust-dots" aria-hidden="true" data-trust-dots>
+        <span class="is-active"></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <footer class="checkout-footer">
+        <p>Formas de pagamento:</p>
+        <div class="payment-flags" aria-label="Formas de pagamento">
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-elo.png" alt="Elo" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-pix.png" alt="Pix" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-amex.png" alt="American Express" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-visa.png" alt="Visa" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-diners.png" alt="Diners Club" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-mastercard.png" alt="Mastercard" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-discover.png" alt="Discover" loading="lazy"></span>
+          <span class="payment-logo payment-logo--card"><img src="assets/checkout/payment-aura.png" alt="Aura" loading="lazy"></span>
+        </div>
+        <button class="checkout-footer__info-button" type="button" data-store-info-open>Informações da loja</button>
+        <small>Todos os direitos reservados</small>
+      </footer>
+
+      <div class="card-payment-modal" data-card-payment-modal hidden>
+        <div class="card-payment-modal__backdrop" data-card-payment-close></div>
+        <section class="card-payment-modal__sheet" role="dialog" aria-modal="true" aria-live="polite" aria-labelledby="CardPaymentTitle" tabindex="-1">
+          <button class="card-payment-modal__close" type="button" aria-label="Fechar aviso do pagamento" data-card-payment-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="card-payment-modal__loading" data-card-payment-loading>
+            <span class="card-payment-modal__spinner" aria-hidden="true"></span>
+            <h2 id="CardPaymentTitle">Processando pagamento</h2>
+            <p>Aguarde enquanto confirmamos os dados do cartão.</p>
+          </div>
+
+          <div class="card-payment-modal__error" data-card-payment-error hidden>
+            <span class="card-payment-modal__status-icon" aria-hidden="true">!</span>
+            <h2>Não foi possível realizar o pagamento no cartão</h2>
+            <p>Tente finalizar pelo Pix para aproveitar 5% OFF e prioridade de envio.</p>
+            <button class="checkout-button" type="button" data-card-payment-try-pix>Tentar pagar no Pix</button>
+            <button class="card-payment-modal__secondary" type="button" data-card-payment-close>Voltar</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="store-info-modal" data-store-info-modal hidden>
+        <div class="store-info-modal__backdrop" data-store-info-close></div>
+        <section class="store-info-modal__sheet" role="dialog" aria-modal="true" aria-labelledby="StoreInfoTitle" tabindex="-1">
+          <button class="store-info-modal__close" type="button" aria-label="Fechar informações da loja" data-store-info-close>
+            <span aria-hidden="true">×</span>
+          </button>
+          <h2 id="StoreInfoTitle">Informações de contato</h2>
+          <p><strong>Panini Brasil Ltda.</strong> - CNPJ: 58.732.058/0001-00</p>
+          <p>Alameda Caiapós, 425, Tamboré/SP, CEP: 06460-110</p>
+          <p><strong>Atendimento:</strong> paninihelp.zendesk.com</p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
